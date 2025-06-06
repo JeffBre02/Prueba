@@ -24,6 +24,12 @@ public class ViewPrincipal extends JFrame {
 	private JPanel contentPane;
 	public JPanel panel_0;
 	public JPanel pnlPrincipal;
+	public JLabel lbltitulo;
+	private JButton btnProfesores;
+	private JButton btnEstudiantes;
+	private JButton btnReportes;
+	private JButton btnMatriculas;
+	private JButton btnCursos;
 
 	
 	public ViewPrincipal() {
@@ -67,76 +73,87 @@ public class ViewPrincipal extends JFrame {
 		panel_0.add(panel_1, BorderLayout.WEST);
 		GridBagLayout gbl_panel_1 = new GridBagLayout();
 		gbl_panel_1.columnWidths = new int[]{41, 266, 30, 0};
-		gbl_panel_1.rowHeights = new int[]{29, 68, 31, 68, 31, 68, 31, 68, 31, 68, 0};
+		gbl_panel_1.rowHeights = new int[]{31, 65, 31, 65, 31, 65, 31, 65, 31, 65, 31, 0};
 		gbl_panel_1.columnWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
-		gbl_panel_1.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl_panel_1.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		panel_1.setLayout(gbl_panel_1);
 		
-		JButton button = new JButton("GUARDAR");
-		button.setOpaque(false);
-		button.setPreferredSize(new Dimension(107, 40));
-		button.setForeground(Color.WHITE);
-		button.setFont(new Font("Dialog", Font.PLAIN, 20));
-		button.setFocusPainted(false);
-		button.setBackground(new Color(0, 128, 0));
-		GridBagConstraints gbc_button = new GridBagConstraints();
-		gbc_button.fill = GridBagConstraints.BOTH;
-		gbc_button.insets = new Insets(0, 0, 5, 5);
-		gbc_button.gridx = 1;
-		gbc_button.gridy = 1;
-		panel_1.add(button, gbc_button);
+		btnProfesores = new JButton("PROFESORES");
+		btnProfesores.setMinimumSize(new Dimension(95, 25));
+		btnProfesores.setMaximumSize(new Dimension(95, 25));
+		btnProfesores.setOpaque(false);
+		btnProfesores.setPreferredSize(new Dimension(95, 25));
+		btnProfesores.setForeground(Color.WHITE);
+		btnProfesores.setFont(new Font("Dialog", Font.PLAIN, 20));
+		btnProfesores.setFocusPainted(false);
+		btnProfesores.setBackground(new Color(0, 128, 0));
+		GridBagConstraints gbc_btnProfesores = new GridBagConstraints();
+		gbc_btnProfesores.fill = GridBagConstraints.BOTH;
+		gbc_btnProfesores.insets = new Insets(0, 0, 5, 5);
+		gbc_btnProfesores.gridx = 1;
+		gbc_btnProfesores.gridy = 1;
+		panel_1.add(btnProfesores, gbc_btnProfesores);
 		
-		JButton button_1 = new JButton("GUARDAR");
-		button_1.setOpaque(false);
-		button_1.setForeground(Color.WHITE);
-		button_1.setFont(new Font("Dialog", Font.PLAIN, 20));
-		button_1.setFocusPainted(false);
-		button_1.setBackground(new Color(0, 128, 0));
-		GridBagConstraints gbc_button_1 = new GridBagConstraints();
-		gbc_button_1.fill = GridBagConstraints.BOTH;
-		gbc_button_1.insets = new Insets(0, 0, 5, 5);
-		gbc_button_1.gridx = 1;
-		gbc_button_1.gridy = 3;
-		panel_1.add(button_1, gbc_button_1);
+		btnEstudiantes = new JButton("ESTUDIANTES");
+		btnEstudiantes.setPreferredSize(new Dimension(95, 25));
+		btnEstudiantes.setMinimumSize(new Dimension(95, 25));
+		btnEstudiantes.setMaximumSize(new Dimension(95, 25));
+		btnEstudiantes.setOpaque(false);
+		btnEstudiantes.setForeground(Color.WHITE);
+		btnEstudiantes.setFont(new Font("Dialog", Font.PLAIN, 20));
+		btnEstudiantes.setFocusPainted(false);
+		btnEstudiantes.setBackground(new Color(0, 128, 0));
+		GridBagConstraints gbc_btnEstudiantes = new GridBagConstraints();
+		gbc_btnEstudiantes.fill = GridBagConstraints.BOTH;
+		gbc_btnEstudiantes.insets = new Insets(0, 0, 5, 5);
+		gbc_btnEstudiantes.gridx = 1;
+		gbc_btnEstudiantes.gridy = 3;
+		panel_1.add(btnEstudiantes, gbc_btnEstudiantes);
 		
-		JButton button_2 = new JButton("GUARDAR");
-		button_2.setOpaque(false);
-		button_2.setForeground(Color.WHITE);
-		button_2.setFont(new Font("Dialog", Font.PLAIN, 20));
-		button_2.setFocusPainted(false);
-		button_2.setBackground(new Color(0, 128, 0));
-		GridBagConstraints gbc_button_2 = new GridBagConstraints();
-		gbc_button_2.fill = GridBagConstraints.BOTH;
-		gbc_button_2.insets = new Insets(0, 0, 5, 5);
-		gbc_button_2.gridx = 1;
-		gbc_button_2.gridy = 5;
-		panel_1.add(button_2, gbc_button_2);
+		btnCursos = new JButton("CURSOS");
+		btnCursos.setMinimumSize(new Dimension(95, 25));
+		btnCursos.setMaximumSize(new Dimension(95, 25));
+		btnCursos.setPreferredSize(new Dimension(95, 25));
+		btnCursos.setOpaque(false);
+		btnCursos.setForeground(Color.WHITE);
+		btnCursos.setFont(new Font("Dialog", Font.PLAIN, 20));
+		btnCursos.setFocusPainted(false);
+		btnCursos.setBackground(new Color(0, 128, 0));
+		GridBagConstraints gbc_btnCursos = new GridBagConstraints();
+		gbc_btnCursos.fill = GridBagConstraints.BOTH;
+		gbc_btnCursos.insets = new Insets(0, 0, 5, 5);
+		gbc_btnCursos.gridx = 1;
+		gbc_btnCursos.gridy = 5;
+		panel_1.add(btnCursos, gbc_btnCursos);
 		
-		JButton button_3 = new JButton("GUARDAR");
-		button_3.setOpaque(false);
-		button_3.setForeground(Color.WHITE);
-		button_3.setFont(new Font("Dialog", Font.PLAIN, 20));
-		button_3.setFocusPainted(false);
-		button_3.setBackground(new Color(0, 128, 0));
-		GridBagConstraints gbc_button_3 = new GridBagConstraints();
-		gbc_button_3.fill = GridBagConstraints.BOTH;
-		gbc_button_3.insets = new Insets(0, 0, 5, 5);
-		gbc_button_3.gridx = 1;
-		gbc_button_3.gridy = 7;
-		panel_1.add(button_3, gbc_button_3);
+		btnMatriculas = new JButton("MATR\u00CDCULAS");
+		btnMatriculas.setPreferredSize(new Dimension(95, 25));
+		btnMatriculas.setMinimumSize(new Dimension(95, 25));
+		btnMatriculas.setMaximumSize(new Dimension(95, 25));
+		btnMatriculas.setOpaque(false);
+		btnMatriculas.setForeground(Color.WHITE);
+		btnMatriculas.setFont(new Font("Dialog", Font.PLAIN, 20));
+		btnMatriculas.setFocusPainted(false);
+		btnMatriculas.setBackground(new Color(0, 128, 0));
+		GridBagConstraints gbc_btnMatriculas = new GridBagConstraints();
+		gbc_btnMatriculas.fill = GridBagConstraints.BOTH;
+		gbc_btnMatriculas.insets = new Insets(0, 0, 5, 5);
+		gbc_btnMatriculas.gridx = 1;
+		gbc_btnMatriculas.gridy = 7;
+		panel_1.add(btnMatriculas, gbc_btnMatriculas);
 		
-		JButton button_4 = new JButton("GUARDAR");
-		button_4.setOpaque(false);
-		button_4.setForeground(Color.WHITE);
-		button_4.setFont(new Font("Dialog", Font.PLAIN, 20));
-		button_4.setFocusPainted(false);
-		button_4.setBackground(new Color(0, 128, 0));
-		GridBagConstraints gbc_button_4 = new GridBagConstraints();
-		gbc_button_4.fill = GridBagConstraints.BOTH;
-		gbc_button_4.insets = new Insets(0, 0, 0, 5);
-		gbc_button_4.gridx = 1;
-		gbc_button_4.gridy = 9;
-		panel_1.add(button_4, gbc_button_4);
+		btnReportes = new JButton("REPORTES");
+		btnReportes.setOpaque(false);
+		btnReportes.setForeground(Color.WHITE);
+		btnReportes.setFont(new Font("Dialog", Font.PLAIN, 20));
+		btnReportes.setFocusPainted(false);
+		btnReportes.setBackground(new Color(0, 128, 0));
+		GridBagConstraints gbc_btnReportes = new GridBagConstraints();
+		gbc_btnReportes.fill = GridBagConstraints.BOTH;
+		gbc_btnReportes.insets = new Insets(0, 0, 5, 5);
+		gbc_btnReportes.gridx = 1;
+		gbc_btnReportes.gridy = 9;
+		panel_1.add(btnReportes, gbc_btnReportes);
 		
 		JPanel panel_2 = new JPanel();
 		panel_0.add(panel_2, BorderLayout.CENTER);
@@ -154,7 +171,7 @@ public class ViewPrincipal extends JFrame {
 		gbl_panel_3.rowWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
 		panel_3.setLayout(gbl_panel_3);
 		
-		JLabel lbltitulo = new JLabel("TITULO");
+		lbltitulo = new JLabel("TITULO");
 		lbltitulo.setAlignmentX(10.0f);
 		lbltitulo.setFont(new Font("Dialog", Font.PLAIN, 20));
 		GridBagConstraints gbc_lbltitulo = new GridBagConstraints();
@@ -175,11 +192,11 @@ public class ViewPrincipal extends JFrame {
 	}
 	
 	public void setContenido(JPanel p) {
+		
 		pnlPrincipal.removeAll();
 		pnlPrincipal.add(p,BorderLayout.CENTER);
 		pnlPrincipal.repaint();
 		pnlPrincipal.revalidate();
+		
 	}
-
-
 }

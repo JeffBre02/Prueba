@@ -22,18 +22,18 @@ import java.awt.FlowLayout;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.SwingConstants;
+import javax.swing.JComboBox;
 
-public class ViewModuloProfesores extends JPanel {
+public class ViewModuloCursos extends JPanel {
 	private JTable table;
-	private JTextField txtCodigo;
-	private JTextField lblNombre;
+	private JTextField txtSigla;
 	private JButton btnGuardar;
 	private JButton btnEliminar;
 
 	/**
 	 * Create the panel.
 	 */
-	public ViewModuloProfesores() {
+	public ViewModuloCursos() {
 		setPreferredSize(new Dimension(732, 438));
 		setLayout(new BorderLayout(0, 0));
 		
@@ -61,48 +61,66 @@ public class ViewModuloProfesores extends JPanel {
 		panel.add(panel_4, BorderLayout.CENTER);
 		GridBagLayout gbl_panel_4 = new GridBagLayout();
 		gbl_panel_4.columnWidths = new int[]{280, 0};
-		gbl_panel_4.rowHeights = new int[]{35, 60, 35, 60, 60, 0};
+		gbl_panel_4.rowHeights = new int[]{35, 60, 35, 60, 35, 60, 86, 0};
 		gbl_panel_4.columnWeights = new double[]{1.0, Double.MIN_VALUE};
-		gbl_panel_4.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl_panel_4.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		panel_4.setLayout(gbl_panel_4);
 		
-		JLabel lblCodigo = new JLabel("C\u00D3DIGO");
-		lblCodigo.setFont(new Font("Dialog", Font.PLAIN, 20));
-		GridBagConstraints gbc_lblCodigo = new GridBagConstraints();
-		gbc_lblCodigo.anchor = GridBagConstraints.SOUTHWEST;
-		gbc_lblCodigo.insets = new Insets(0, 0, 5, 0);
-		gbc_lblCodigo.gridx = 0;
-		gbc_lblCodigo.gridy = 0;
-		panel_4.add(lblCodigo, gbc_lblCodigo);
+		JLabel lblNom = new JLabel("SIGLA");
+		lblNom.setFont(new Font("Dialog", Font.PLAIN, 20));
+		GridBagConstraints gbc_lblNom = new GridBagConstraints();
+		gbc_lblNom.anchor = GridBagConstraints.SOUTHWEST;
+		gbc_lblNom.insets = new Insets(0, 0, 5, 0);
+		gbc_lblNom.gridx = 0;
+		gbc_lblNom.gridy = 0;
+		panel_4.add(lblNom, gbc_lblNom);
 		
-		txtCodigo = new JTextField();
-		txtCodigo.setPreferredSize(new Dimension(6, 30));
-		GridBagConstraints gbc_txtCodigo = new GridBagConstraints();
-		gbc_txtCodigo.fill = GridBagConstraints.HORIZONTAL;
-		gbc_txtCodigo.insets = new Insets(0, 0, 5, 0);
-		gbc_txtCodigo.gridx = 0;
-		gbc_txtCodigo.gridy = 1;
-		panel_4.add(txtCodigo, gbc_txtCodigo);
-		txtCodigo.setColumns(10);
+		txtSigla = new JTextField();
+		txtSigla.setPreferredSize(new Dimension(6, 30));
+		GridBagConstraints gbc_txtSigla = new GridBagConstraints();
+		gbc_txtSigla.fill = GridBagConstraints.HORIZONTAL;
+		gbc_txtSigla.insets = new Insets(0, 0, 5, 0);
+		gbc_txtSigla.gridx = 0;
+		gbc_txtSigla.gridy = 1;
+		panel_4.add(txtSigla, gbc_txtSigla);
+		txtSigla.setColumns(10);
 		
-		JLabel txtNombre = new JLabel("NOMBRE");
-		txtNombre.setFont(new Font("Dialog", Font.PLAIN, 20));
+		JLabel lblCarnet = new JLabel("NOMBRE");
+		lblCarnet.setFont(new Font("Dialog", Font.PLAIN, 20));
+		GridBagConstraints gbc_lblCarnet = new GridBagConstraints();
+		gbc_lblCarnet.anchor = GridBagConstraints.SOUTHWEST;
+		gbc_lblCarnet.insets = new Insets(0, 0, 5, 0);
+		gbc_lblCarnet.gridx = 0;
+		gbc_lblCarnet.gridy = 2;
+		panel_4.add(lblCarnet, gbc_lblCarnet);
+		
+		JTextField txtNombre = new JTextField();
+		txtNombre.setPreferredSize(new Dimension(10, 30));
 		GridBagConstraints gbc_txtNombre = new GridBagConstraints();
-		gbc_txtNombre.anchor = GridBagConstraints.SOUTHWEST;
 		gbc_txtNombre.insets = new Insets(0, 0, 5, 0);
+		gbc_txtNombre.fill = GridBagConstraints.HORIZONTAL;
 		gbc_txtNombre.gridx = 0;
-		gbc_txtNombre.gridy = 2;
+		gbc_txtNombre.gridy = 3;
 		panel_4.add(txtNombre, gbc_txtNombre);
+		txtNombre.setColumns(10);
 		
-		lblNombre = new JTextField();
-		lblNombre.setPreferredSize(new Dimension(10, 30));
-		GridBagConstraints gbc_lblNombre = new GridBagConstraints();
-		gbc_lblNombre.insets = new Insets(0, 0, 5, 0);
-		gbc_lblNombre.fill = GridBagConstraints.HORIZONTAL;
-		gbc_lblNombre.gridx = 0;
-		gbc_lblNombre.gridy = 3;
-		panel_4.add(lblNombre, gbc_lblNombre);
-		lblNombre.setColumns(10);
+		JLabel lblCurso = new JLabel("CURSO");
+		lblCurso.setFont(new Font("Dialog", Font.PLAIN, 20));
+		GridBagConstraints gbc_lblCurso = new GridBagConstraints();
+		gbc_lblCurso.anchor = GridBagConstraints.WEST;
+		gbc_lblCurso.insets = new Insets(0, 0, 5, 0);
+		gbc_lblCurso.gridx = 0;
+		gbc_lblCurso.gridy = 4;
+		panel_4.add(lblCurso, gbc_lblCurso);
+		
+		JComboBox cBCurso = new JComboBox();
+		cBCurso.setPreferredSize(new Dimension(31, 30));
+		GridBagConstraints gbc_cBCurso = new GridBagConstraints();
+		gbc_cBCurso.insets = new Insets(0, 0, 5, 0);
+		gbc_cBCurso.fill = GridBagConstraints.HORIZONTAL;
+		gbc_cBCurso.gridx = 0;
+		gbc_cBCurso.gridy = 5;
+		panel_4.add(cBCurso, gbc_cBCurso);
 		
 		btnGuardar = new JButton("GUARDAR");
 		btnGuardar.setForeground(Color.WHITE);
@@ -113,7 +131,7 @@ public class ViewModuloProfesores extends JPanel {
 		GridBagConstraints gbc_btnGuardar = new GridBagConstraints();
 		gbc_btnGuardar.anchor = GridBagConstraints.EAST;
 		gbc_btnGuardar.gridx = 0;
-		gbc_btnGuardar.gridy = 4;
+		gbc_btnGuardar.gridy = 6;
 		panel_4.add(btnGuardar, gbc_btnGuardar);
 		
 		JPanel panel_1 = new JPanel();
@@ -150,5 +168,4 @@ public class ViewModuloProfesores extends JPanel {
 		panel_5.add(panel_7, BorderLayout.NORTH);
 
 	}
-	
 }
