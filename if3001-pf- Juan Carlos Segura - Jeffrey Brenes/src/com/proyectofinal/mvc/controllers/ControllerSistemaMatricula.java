@@ -67,8 +67,6 @@ import com.proyectofinal.mvc.views.ViewPrincipal;
 			c1.matricularEstudiante(e2);
 			c2.matricularEstudiante(e2);
 			
-			c1.prueba();
-			
 			//modulo reportes
 			System.out.println("Lista de cursos que van en jcombo: "+listaCursos.getListaCursos());
 			System.out.println("Se va a buscar la lista de estdiantes"+

@@ -67,10 +67,6 @@ public class Curso {
 		listaEstudiantes.delete(item);
 	}
 	
-	public void prueba() {
-		System.err.println("Prueba");
-	}
-	
 
 	@Override
 	public String toString() {
