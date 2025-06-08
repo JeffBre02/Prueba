@@ -25,11 +25,11 @@ public class ViewPrincipal extends JFrame {
 	public JPanel panel_0;
 	public JPanel pnlPrincipal;
 	public JLabel lbltitulo;
-	public JButton btnProfesores;
-	public JButton btnEstudiantes;
-	public JButton btnReportes;
-	public JButton btnMatriculas;
-	public JButton btnCursos;
+	private JButton btnProfesores;
+	private JButton btnEstudiantes;
+	private JButton btnReportes;
+	private JButton btnMatriculas;
+	private JButton btnCursos;
 
 	
 	public ViewPrincipal() {
