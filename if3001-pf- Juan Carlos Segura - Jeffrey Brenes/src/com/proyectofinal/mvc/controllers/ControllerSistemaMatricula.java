@@ -66,4 +66,5 @@ import com.proyectofinal.mvc.views.ViewPrincipal;
 			System.out.println("Se va a buscar al profesor Ito"+
 					 " y los cursos que imparte\n"+listaCursos.getCursosProfesor(p2));
 		}
+		//cambio para commit
 }

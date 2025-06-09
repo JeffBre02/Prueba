@@ -199,4 +199,5 @@ public class ViewPrincipal extends JFrame {
 		pnlPrincipal.revalidate();
 		
 	}
+	//cambio para commit
 }

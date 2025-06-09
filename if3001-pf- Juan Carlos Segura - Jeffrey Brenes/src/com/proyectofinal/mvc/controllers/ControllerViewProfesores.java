@@ -18,4 +18,5 @@ public class ControllerViewProfesores {
 	public JPanel cambiarVentanaP() {
 			return vmp;
 	}
+	//cambio para commit
 }

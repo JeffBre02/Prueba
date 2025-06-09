@@ -15,4 +15,5 @@ ViewModuloCursos vmc;
 	public JPanel cambiarVentanaC() {
 		return vmc;
 	}
+	//cambio para commit
 }
