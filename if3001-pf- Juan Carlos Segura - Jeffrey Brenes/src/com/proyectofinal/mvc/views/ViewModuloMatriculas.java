@@ -25,9 +25,10 @@ import javax.swing.SwingConstants;
 import javax.swing.JComboBox;
 
 public class ViewModuloMatriculas extends JPanel {
-	private JButton btnGuardar;
-	private JButton btnEliminar;
-	private JComboBox cBCursos;
+	
+	public JButton btnGuardar;
+	public JButton btnEliminar;
+	public JComboBox cBCursos;
 
 	/**
 	 * Create the panel.
@@ -107,19 +108,19 @@ public class ViewModuloMatriculas extends JPanel {
 		panel_4.add(panel_5, gbc_panel_5);
 		
 		btnGuardar = new JButton("+MATRICULAR");
-		btnGuardar.setBounds(0, 0, 129, 34);
+		btnGuardar.setBounds(0, 0, 170, 34);
 		panel_5.add(btnGuardar);
 		btnGuardar.setForeground(Color.WHITE);
 		btnGuardar.setFocusPainted(false);
 		btnGuardar.setBorderPainted(false);
 		btnGuardar.setBackground(new Color(0, 128, 0));
-		btnGuardar.setFont(new Font("Dialog", Font.PLAIN, 20));
+		btnGuardar.setFont(new Font("Dialog", Font.PLAIN, 15));
 		
 		btnEliminar = new JButton("-DESMATRICULAR");
-		btnEliminar.setBounds(365, 0, 125, 34);
+		btnEliminar.setBounds(320, 0, 170, 34);
 		panel_5.add(btnEliminar);
 		btnEliminar.setForeground(Color.WHITE);
-		btnEliminar.setFont(new Font("Dialog", Font.PLAIN, 20));
+		btnEliminar.setFont(new Font("Dialog", Font.PLAIN, 15));
 		btnEliminar.setFocusPainted(false);
 		btnEliminar.setBorderPainted(false);
 		btnEliminar.setBackground(new Color(255, 0, 0));

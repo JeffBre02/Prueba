@@ -16,7 +16,9 @@ public class ControllerGeneral {
 		this.cve = new ControllerViewEstudiantes();
 		this.cvm = new ControllerViewMatricula();
 		this.cvc = new ControllerViewCursos();
-		
+	}
+	
+	public void init() {
 		cambiarVentanaE();
 		cambiarVentanaP();
 		cambiarVentanaM();
