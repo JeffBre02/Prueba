@@ -11,7 +11,17 @@ import com.proyectofinal.mvc.views.ViewPrincipal;
 
 	public class ControllerSistemaMatricula {
 		
+		private ViewPrincipal viewPrincipal;
+		private ViewModuloProfesores vmp;
+
 		public ControllerSistemaMatricula() {
+			viewPrincipal = new ViewPrincipal();
+			vmp = new ViewModuloProfesores();
+		}
+		
+		public void metodoX() {
+			System.out.println("Yanffrey Brenes");
+			System.out.println("Yanffrey Brenes");
 		}
 		
 		public void init() {
@@ -65,6 +75,9 @@ import com.proyectofinal.mvc.views.ViewPrincipal;
 			System.out.println("Lista de profes que van en jcombo: "+listaProfesores.getListaProfesores());
 			System.out.println("Se va a buscar al profesor Ito"+
 					 " y los cursos que imparte\n"+listaCursos.getCursosProfesor(p2));
+			viewPrincipal.init();
+			viewPrincipal.setContenido(vmp);
+			metodoX();
 		}
 		//cambio para commit
 }
