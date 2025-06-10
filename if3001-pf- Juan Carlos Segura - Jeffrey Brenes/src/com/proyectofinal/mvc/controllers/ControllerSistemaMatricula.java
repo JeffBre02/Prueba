@@ -79,4 +79,5 @@ import com.proyectofinal.mvc.views.ViewPrincipal;
 			viewPrincipal.setContenido(vmp);
 			metodoX();
 		}
+		//cambio para commit
 }
