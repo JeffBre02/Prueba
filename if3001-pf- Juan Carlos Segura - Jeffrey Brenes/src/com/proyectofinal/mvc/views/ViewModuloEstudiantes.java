@@ -24,10 +24,10 @@ import java.awt.Font;
 import javax.swing.SwingConstants;
 
 public class ViewModuloEstudiantes extends JPanel {
-	private JTable table;
-	private JTextField txtNombre;
-	private JButton btnGuardar;
-	private JButton btnEliminar;
+	public JTable table;
+	public JTextField txtNombre;
+	public JButton btnGuardar;
+	public JButton btnEliminar;
 
 	/**
 	 * Create the panel.

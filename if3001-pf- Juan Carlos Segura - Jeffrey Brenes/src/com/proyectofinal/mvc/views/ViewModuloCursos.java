@@ -25,10 +25,10 @@ import javax.swing.SwingConstants;
 import javax.swing.JComboBox;
 
 public class ViewModuloCursos extends JPanel {
-	private JTable table;
-	private JTextField txtSigla;
-	private JButton btnGuardar;
-	private JButton btnEliminar;
+	public JTable table;
+	public JTextField txtSigla;
+	public JButton btnGuardar;
+	public JButton btnEliminar;
 
 	/**
 	 * Create the panel.
