@@ -14,11 +14,16 @@ public class ControllerGeneral {
 		this.vp = new ViewPrincipal();
 		this.cvp = new ControllerViewProfesores();
 		this.cve = new ControllerViewEstudiantes();
-		this.cvm = new ControllerViewMatricula();
 		this.cvc = new ControllerViewCursos();
+		this.cvm = new ControllerViewMatricula();
 	}
 	
 	public void init() {
+		cvp.init();
+		cve.init();
+		cvc.init();
+		cvm.init();
+		
 		cambiarVentanaE();
 		cambiarVentanaP();
 		cambiarVentanaM();

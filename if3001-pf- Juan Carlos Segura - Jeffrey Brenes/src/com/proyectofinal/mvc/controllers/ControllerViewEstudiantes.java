@@ -12,8 +12,24 @@ public class ControllerViewEstudiantes {
 		this.vme = new ViewModuloEstudiantes();
 	}
 	
+	public void init() {
+		agregarEstudiante();
+		eliminarEstudiante();
+	}
+	
 	public JPanel cambiarVentanaE() {
 			return vme;
 	}
-	//cambio para commit
+	
+	public void agregarEstudiante() {
+		vme.btnGuardar.addActionListener(e ->{
+			System.err.println("guardar estudiante");
+		});
+	}
+	
+	public void eliminarEstudiante() {
+		vme.btnEliminar.addActionListener(e -> {
+			System.err.println("eliminar estudiante");
+		});
+	}
 }

@@ -13,8 +13,24 @@ public class ControllerViewMatricula {
 		this.vmm = new ViewModuloMatriculas();
 	}
 	
+	public void init() {
+		agregarProfesor();
+		eliminarProfesor();
+	}
+	
 	public JPanel cambiarVentanaM() {
 		return vmm;
 	}
-	//cambio para commit
+	
+	public void agregarProfesor() {
+		vmm.btnGuardar.addActionListener(e ->{
+			System.err.println("guardar matricula");
+		});
+	}
+	
+	public void eliminarProfesor() {
+		vmm.btnEliminar.addActionListener(e -> {
+			System.err.println("eliminar matricula");
+		});
+	}
 }
